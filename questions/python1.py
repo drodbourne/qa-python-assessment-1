@@ -34,10 +34,20 @@
 	# <HINT>
 
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
-
+input1 = "hi"
+input2 = "hello"
 def one(input1, input2):
-	return ""
-
+	if len(input1) > len(input2):
+		print(input1)
+		return input1
+	elif len(input1) == len(input2):
+		print(input1 + " " + input2)
+		return input1 + " " + input2
+	else:
+		print(input2)
+		return input2
+	
+print(one)
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 2>
@@ -58,9 +68,17 @@ def one(input1, input2):
 	# <HINT>
 
 	# No hints for this question
-
+  
 def two(arg1):
-	return "null"
+
+	if arg1 % 3 == 0 and arg1 % 5 == 0 :
+		return "fizzbuzz"
+	if arg1 % 3 == 0 and arg1 % 5 > 0 :
+		return "fizz"
+	if arg1 % 3 > 0 and arg1 % 5 == 0 :
+		return "buzz"
+	else:
+		return "null"
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -77,9 +95,13 @@ def two(arg1):
 	# <HINTS>
 
 	# How do we ignore case in a String? help(str) may offer some insight.
-
+'''
 def three(input):
-    return 0
+	vowels='aeiou'
+	count = 0
+	for s in input:
+            if s in vowels: count=count+1
+	return count	
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -102,8 +124,20 @@ def three(input):
 
 
 def four(input):
-    return False
-
+	if 'ei' in input:
+    	index = input.index('ei')
+    	if input[index - 1] == 'c':
+            return True
+        else:
+            return False
+    	if 'ie' in input:
+        	index = input.index('ie')
+        if input[index -1] == 'c':
+            return False
+        else:
+            return True
+    
+'''
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 5>
